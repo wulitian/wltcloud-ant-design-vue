@@ -1,13 +1,10 @@
-//异步路由
+//基础路由
 export const baseRouterMap = [
   {
     path: '/HelloWorld',
     name: 'HelloWorld',
     component: () => import('@/components/HelloWorld'),
-  }
-]
-//基础路由
-export const asyncRouterMap = [
+  },
   {
     path: '/',
     name: 'main',
@@ -15,6 +12,10 @@ export const asyncRouterMap = [
     redirect: '/main/workplace',
     meta: { title: '首页' }
   },
+]
+//异步路由
+export const asyncRouterMap = [
+
   {
     path: '/main',
     name: 'main',

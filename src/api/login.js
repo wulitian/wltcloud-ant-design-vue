@@ -38,3 +38,14 @@ export const getToken = (data) => {
     method: 'get',
   })
 }
+
+/**
+ * 获取菜单
+ * @param menuId
+ */
+export const getNav = () => {
+  return axios({
+    url: '/api/getNav',
+    method: 'get',
+  })
+}

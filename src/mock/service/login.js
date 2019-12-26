@@ -43,6 +43,25 @@ const getUserInfo = () => {
   return builder(data.list,"查询成功",code.OK)
 }
 
+const getNav = () => {
+  const data = Mock.mock({
+    list:[
+      {
+        'name': 'workplace',
+        'path':'/main/workplace',
+        'parentId': 0,
+        'id': 7,
+        'meta': {
+          'title': '工作台',
+          'show': true
+        },
+        'component': 'WorkPlace'
+      }
+    ]
+  })
+  return builder(data.list,"查询成功",code.OK)
+}
+
 //测试
 Mock.mock(baseurl+'/api/test','get',test);
 
@@ -51,6 +70,9 @@ Mock.mock(baseurl+'/api/getToken','get',getToken);
 
 //用户信息
 Mock.mock(baseurl+'/api/login','get',getUserInfo);
+
+//获取菜单
+Mock.mock(baseurl+'/api/getNav','get',getNav);
 
 export {
   Mock

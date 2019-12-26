@@ -5,12 +5,12 @@ router.beforeEach((to, from, next) => {
   if (store.getters.routeState) {
     store.dispatch('GenerateRoutes').then(() => {
       router.addRoutes(store.getters.addRouters)
-        next({ ...to, replace: true })
+      next({ ...to, replace: true })
     })
   } else {
     next()
   }
 })
 
-router.afterEach(() => {
+router.afterEach((to, from) => {
 })
