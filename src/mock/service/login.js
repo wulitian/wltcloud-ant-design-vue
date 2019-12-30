@@ -46,16 +46,50 @@ const getUserInfo = () => {
 const getNav = () => {
   const data = Mock.mock({
     list:[
+      // dashboard
       {
         'name': 'workplace',
         'path':'/main/workplace',
         'parentId': 0,
-        'id': 7,
+        'id': 100,
+        'meta': {
+          'title': '用户管理',
+          'show': true
+        },
+        'component': 'Main'
+      },
+      {
+        'name': 'workplace2',
+        'path':'/main/HelloWorld',
+        'parentId': 100,
+        'id': 1000,
         'meta': {
           'title': '工作台',
           'show': true
         },
-        'component': 'WorkPlace'
+        'component': 'Workplace'
+      },
+      {
+        'name': 'workplace3',
+        'path':'/main/aaa',
+        'parentId': 0,
+        'id': 200,
+        'meta': {
+          'title': '菜单管理',
+          'show': true
+        },
+        'component': 'Main'
+      },
+      {
+        'name': 'workplace4',
+        'path':'/main/HelloWorld2',
+        'parentId': 200,
+        'id': 2000,
+        'meta': {
+          'title': '工作台2',
+          'show': true
+        },
+        'component': 'HelloWorld'
       }
     ]
   })

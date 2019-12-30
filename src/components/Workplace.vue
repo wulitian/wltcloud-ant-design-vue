@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    奥术大师大所
+    工作台
   </div>
 </template>
 
@@ -8,7 +8,7 @@
   import {test,getUserInfo,getToken} from "@/api/login";
   import { mapActions } from 'vuex'
   export default {
-  name: 'HelloWorld',
+  name: 'Workplace',
   data () {
     return {
 

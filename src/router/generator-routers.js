@@ -1,16 +1,16 @@
 import {getNav} from "@/api/login";
 // 根级菜单
 const rootRouter = {
-  key: '',
   name: 'main',
-  path: '/main',
-  component: 'Main',
+  path: '/',
+  component: 'BlankLayout',
   redirect: '/main/workplace',
   meta: {
     title: '首页'
   },
   children: []
 }
+
 /**
  * 动态生成菜单
  * @param token
@@ -46,14 +46,9 @@ export const generator = (routerMap, parent) => {
   return routerMap.map(item => {
     const { title, show, hideChildren, hiddenHeaderContent, target, icon } = item.meta || {}
     const currentRouter = {
-      // 如果路由设置了 path，则作为默认 path，否则 路由地址 动态拼接生成如 /dashboard/workplace
-      path: item.path || `${parent && parent.path || ''}/${item.key}`,
-      // 路由名称，建议唯一
-      name: item.name || item.key || '',
-      // 该路由对应页面的 组件 :方案2 (动态加载)
-      // component: () => import(`@/components/${item.component}`),
+      path: item.path ,
+      name: item.name || '',
       component:()=> import(`@/components/${item.component}`),
-      // meta: 页面标题, 菜单图标, 页面权限(供指令权限用，可去掉)
       meta: { title: title, icon: icon || undefined, hiddenHeaderContent: hiddenHeaderContent, target: target, permission: item.name }
     }
     // 是否设置了隐藏菜单
