@@ -9,7 +9,6 @@ import store from './store/'
 import './core/lazy_use'
 import './permission'
 Vue.config.productionTip = false
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

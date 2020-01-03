@@ -44,7 +44,8 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      'static':path.resolve(__dirname,'../../static')/*解决static打包后js中引用static找不到问题*/
+      /*解决static打包后js中引用static找不到问题(经过配置模板中js必须用static,css中必须全路径引用必须全路径，html中随意)*/
+      'static':path.resolve(__dirname,'../../static')
     }
   },
   // 不同文件模块使用不同的loader

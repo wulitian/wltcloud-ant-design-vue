@@ -9,6 +9,8 @@ import 'ant-design-vue/dist/antd.css'
 import Viser from 'viser-vue'
 // 图片剪裁器
 import VueCropper from 'vue-cropper'
+// 集成动画
+import '../../static/animate/animate.min.css'
 
 
 Vue.use(VueStorage, config.storageOptions)
