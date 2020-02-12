@@ -52,7 +52,8 @@ exports.cssLoaders = function (options) {
     if (options.extract) {
       return ExtractTextPlugin.extract({
         use: loaders,
-        fallback: 'vue-style-loader'
+        fallback: 'vue-style-loader',
+        publicPath:'../../'
       })
     } else {
       // 无需提取样式则简单使用vue-style-loader配合各种样式loader去处理vue当中的<style>里面的样式

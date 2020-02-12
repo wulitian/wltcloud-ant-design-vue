@@ -8,6 +8,8 @@
  * 4.配置不同类型模块的处理规则
  * https://github.com/wulitian/wulitian-ui
  */
+// 为了使用webpack内部方法
+const webpack = require('webpack')
 // node.js的文件路径，用来处理文件当中的路径问题
 const path = require('path')
 // 引入utils.js模块
@@ -99,5 +101,13 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  }
+  },
+  //引入jquery解决$ undefined问题
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin('common.js'),
+    new webpack.ProvidePlugin({
+      jQuery: "jquery",
+      $: "jquery"
+    })
+  ]
 }
