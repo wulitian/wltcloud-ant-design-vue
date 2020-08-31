@@ -4,7 +4,7 @@ const rootRouter = {
   name: 'main',
   path: '/',
   component: 'BlankLayout',
-  redirect: '/main/workplace',
+  redirect: '/main',
   meta: {
     title: '首页'
   },

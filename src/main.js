@@ -9,6 +9,7 @@ import './mock/'
 import store from './store/'
 import './core/lazy_use'
 import './permission'
+import './utils/status.js'
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 // new Vue({

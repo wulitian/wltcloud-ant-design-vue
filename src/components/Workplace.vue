@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div>
     工作台
   </div>
 </template>

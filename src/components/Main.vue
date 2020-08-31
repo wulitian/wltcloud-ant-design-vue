@@ -18,7 +18,7 @@
           </a-menu>
         </a-layout-header>
         <a-layout>
-          <a-layout-sider width="200" style="background: #fff">
+          <a-layout-sider width="230" style="background: #fff">
             <a-menu
               :defaultSelectedKeys="['1']"
               :defaultOpenKeys="['2']"
